@@ -1,14 +1,19 @@
 import { Inter } from 'next/font/google';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
+  
     <div className='bg-black text-white p-10'>
+        <Head>
+       <title>Hopp Harbour</title>
+      </Head>
       <div className='max-w-screen-xl mx-auto'>
         <h1 className='text-4xl font-bold mb-6'>Welcome Craft Heads</h1>
         <p className='text-lg mb-4'>
-          Cheers to Craft Beer Enthusiasts! Welcome to [Webshop Name], your
+          Cheers to Craft Beer Enthusiasts! Welcome to Hopp Harbour, your
           ultimate destination for artisanal brews and craft beer excellence.
           🍻
         </p>
@@ -34,7 +39,7 @@ export default function Home() {
         <p className='text-lg mb-4'>
           So, grab a glass, browse our selection, and let's toast to the
           wonderful world of craft beer. Cheers to you, our fellow beer
-          enthusiasts, and welcome to [Webshop Name]!
+          enthusiasts, and welcome to Hopp Harbour!
         </p>
         <p className='text-lg'>
           To your next great beer experience,

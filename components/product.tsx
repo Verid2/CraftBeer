@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const Products = () => {
@@ -7,7 +8,12 @@ const Products = () => {
     { id: 2, name: 'Alkimista Mangolea', imageUrl: '/Mangós 0,33.jpg', description: 'Mangóvelővel ízesített, búzasör alapú gyümölcsössör. Trópusi gyümölcsösség és enyhe keserűség jellemzi.  ' },
   ];
 
-  
+  const router = useRouter();
+
+  const handleLinkClick = (route : string) => {
+    // Use Next.js router to navigate to the specified route
+    router.push(route);
+  };
 
   return (
     <div className="grid grid-cols-3 gap-4 p-4 m-10">
