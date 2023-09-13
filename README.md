@@ -11,6 +11,7 @@ npm run dev
 The project is structured with the following directories:
 
 pages: Contains the various pages of the webshop.
+
 components: Houses reusable components, including the product display and the navbar.
 
 ## Planned Features
