@@ -15,8 +15,8 @@ Later I would like to modify the page with a db for handling the orders and the 
 
 
 Features I like to add:
-1.Registering
-2.Login
-3.User page
-4.Page for the beers
-5.Ordering page
+ 1.Registering
+ 2.Login
+ 3.User page
+ 4.Page for the beers
+ 5.Ordering page
