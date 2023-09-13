@@ -11,7 +11,7 @@ export default function Home() {
        <title>Hopp Harbour</title>
       </Head>
       <div className='max-w-screen-xl mx-auto'>
-        <h1 className='text-4xl font-bold mb-6'>Welcome Craft Heads</h1>
+        <h1 className='text-4xl font-bold mb-12'>Welcome Craft Heads</h1>
         <p className='text-lg mb-4'>
           Cheers to Craft Beer Enthusiasts! Welcome to Hopp Harbour, your
           ultimate destination for artisanal brews and craft beer excellence.
@@ -46,7 +46,7 @@ export default function Home() {
           <br />
           Greg
           <br />
-          Founder, [Webshop Name]
+          Founder, Hopp Harbour
         </p>
       </div>
     </div>
