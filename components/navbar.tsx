@@ -26,6 +26,12 @@ export default function Navbar() {
         >
           Products
         </p>
+        <p
+          className="text-black cursor-pointer hover:underline"
+          onClick={() => handleLinkClick('/login')}
+        >
+          Login
+        </p>
       
     </div>
   );

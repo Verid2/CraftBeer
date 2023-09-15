@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
   host: "127.0.0.1", // Replace with your MySQL host
   user: "admin", // Replace with your MySQL username
   password: "123456", // Replace with your MySQL password
-  database: "hoppharbourdB", // Replace with your MySQL database name
+  database: "hoppharbourdb", // Replace with your MySQL database name
 });
 
 connection.connect((err: any) => {
@@ -15,4 +15,4 @@ connection.connect((err: any) => {
   }
 });
 
-module.exports = connection;
+export default connection;

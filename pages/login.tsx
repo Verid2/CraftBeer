@@ -1,12 +1,9 @@
 import { useRouter } from "next/router";
-import { useState } from "react"
-
+import { useState } from "react";
 
 export default function Login() {
-
-  const [userName, setUsername] = useState<string>();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState<string>();
+  const [userName, setUsername] = useState<string>(""); // Initialize with an empty string
+  const [password, setPassword] = useState<string>(""); // Initialize with an empty string
   const [error, setError] = useState<string>("");
   const router = useRouter();
 
@@ -23,7 +20,7 @@ export default function Login() {
       });
 
       if (response.ok) {
-        router.push("/dashboard"); // Redirect to the dashboard if login is successful
+        router.push("/");
       } else {
         setError("Invalid username or password");
       }
@@ -31,12 +28,11 @@ export default function Login() {
       setError("An error occurred during login.");
     }
   };
-  
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md">
-        <h1 className="text-2xl font-semibold mb-4">Login</h1>
+        <h1 className="text-2xl text-black font-semibold mb-4">Login</h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -46,7 +42,7 @@ export default function Login() {
             <input
               type="text"
               id="username"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 text-black"
               placeholder="Enter your username"
               value={userName}
               onChange={(e) => setUsername(e.target.value)}
@@ -59,20 +55,22 @@ export default function Login() {
             <input
               type="password"
               id="password"
-              className="border rounded w-full py-2 px-3"
+              className="border rounded w-full py-2 px-3 text-black"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button
-            type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
-          >
-            Log In
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+            >
+              Log In
+            </button>
+          </div>
         </form>
       </div>
     </div>
   );
-};
+}
