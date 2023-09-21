@@ -29,6 +29,14 @@ export default function Login() {
     }
   };
 
+  const handleLinkClick = (route : string) => {
+    router.push(route);
+  };
+
+  function handleClick(): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md">
@@ -69,6 +77,8 @@ export default function Login() {
               Log In
             </button>
           </div>
+          <p>If you don't have an account please.</p>
+          <p className="text-blue cursor-pointer hover:underline" onClick={() => handleLinkClick('/register')}>Click Here!</p>
         </form>
       </div>
     </div>
